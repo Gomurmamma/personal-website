@@ -1,0 +1,39 @@
+//LATO - 400
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+//ARCHIVO BLACK - 400
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+
+:root {
+  --black: #1a1b1c;
+  --yellow: #fbbf24;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+}
+
+body {
+  //TYPOGRAPHY
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--black);
+  //
+
+  min-height: 100vh;
+
+  background-color: var(--yellow);
+}
