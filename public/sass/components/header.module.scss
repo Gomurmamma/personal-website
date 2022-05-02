@@ -1,7 +1,9 @@
 .header {
-  background-color: orangered;
+  background-color: var(--yellow);
 
   height: 7rem;
+
+  margin-bottom: 5rem;
 
   display: flex;
   justify-content: flex-end;

@@ -37,9 +37,9 @@ body {
 }
 
 div#__next {
-  max-width: 120rem; //max-width 1200px
+  max-width: 180rem; //max-width 1800px
 
   //center element
-  margin: 8rem auto;
+  margin: 0 auto 0 auto;
   background-color: var(--white);
 }
