@@ -34,6 +34,12 @@ body {
   //
 
   min-height: 100vh;
+}
 
-  background-color: var(--yellow);
+div#__next {
+  max-width: 120rem; //max-width 1200px
+
+  //center element
+  margin: 8rem auto;
+  background-color: var(--white);
 }
