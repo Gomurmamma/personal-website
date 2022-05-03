@@ -1,10 +1,10 @@
 .content {
   background-color: aqua;
-  height: 80vh;
 
-  padding: 2rem 2rem;
+  //center page content in layout
+  margin: 0 auto;
+  //div#__next element is parent element / container
 
-  font-family: "Helvetica Neue", sans-serif;
-  font-size: 5.5rem;
-  line-height: 13.5rem;
+  //internal whitespace
+  padding: 4rem 4rem;
 }

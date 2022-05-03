@@ -1,3 +1,5 @@
+//RUBIK - 400
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 //LATO - 400
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 //ARCHIVO BLACK - 400
@@ -7,6 +9,9 @@
   --black: #1a1b1c;
   --yellow: #fbbf24;
   --white: #ffffff;
+
+  --font-body: Rubik;
+  --font-title: Archivo Black;
 }
 
 * {
@@ -26,20 +31,27 @@ html {
 }
 
 body {
-  //TYPOGRAPHY
-  font-family: Lato, sans-serif;
-  font-weight: 400;
-  line-height: 1.6;
-  color: var(--black);
-  //
-
   min-height: 100vh;
+
+  //TYPOGRAPHY
+  color: var(--black);
+  font-family: var(--font-body), sans-serif;
+  font-weight: 400;
+  //font-size: 5.8rem;
+  //line-height: 13.5rem;
 }
 
 div#__next {
-  max-width: 180rem; //max-width 1800px
+  //max-width: 180rem; //max-width 1800px
 
   //center element
-  margin: 0 auto 0 auto;
+  //margin: 0 auto 0 auto;
   background-color: var(--white);
+
+  //Layout orientation - along Y-axis
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 100vh;
 }
