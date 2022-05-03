@@ -31,8 +31,6 @@ html {
 }
 
 body {
-  min-height: 100vh;
-
   //TYPOGRAPHY
   color: var(--black);
   font-family: var(--font-body), sans-serif;
@@ -44,6 +42,7 @@ body {
 div#__next {
   //max-width: 180rem; //max-width 1800px
 
+  min-height: 100vh;
   //center element
   //margin: 0 auto 0 auto;
   background-color: var(--white);
@@ -52,6 +51,4 @@ div#__next {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-  min-height: 100vh;
 }

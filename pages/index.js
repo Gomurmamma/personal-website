@@ -13,11 +13,9 @@ const Home = () => {
         responsive designs. Check out my latest project{" "}
         <a href="#" className={style.textcontent__link}>
           here.
-        </a>
-      </p>{" "}
-      <p className={style.textcontent__paragraph}>
+        </a>{" "}
         I'm currently available for hire.
-      </p>
+      </p>{" "}
     </main>
   );
 };
