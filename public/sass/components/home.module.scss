@@ -1,4 +1,4 @@
-.textcontent {
+.content {
   margin: 0 5rem;
   font-size: 4.2rem;
 
@@ -10,6 +10,9 @@
 
     //positioning for namespan pseudo element
     position: relative;
+
+    //animation
+    animation: moveInBottom 0.8s ease-in;
   }
 
   &__namespan {
@@ -21,6 +24,9 @@
     padding-bottom: 1.5rem;
 
     color: var(--yellow);
+
+    //!moveinBottom animation
+    animation: moveInBottom 0.4s ease-in;
 
     //positioning pseudo element
 
@@ -46,6 +52,9 @@
 
     //position the Link pseudo element :hover
     position: relative;
+
+    //!moveinBottom animation
+    animation: moveInBottom 1s ease-in;
   }
 
   &__link:link,
@@ -118,5 +127,17 @@
   100% {
     transform: translateY(-0.2rem);
     box-shadow: none;
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
   }
 }
