@@ -59,10 +59,14 @@
     }
   }
 
+  &__link:hover {
+    color: var(--yellow-dark);
+  }
+
   //Underline pseudo element
   &__link:hover::before {
     content: "";
-    background-color: var(--yellow);
+    background-color: var(--yellow-dark);
     display: inline-block;
     height: 0.5rem;
     width: 8rem;

@@ -15,5 +15,9 @@
     width: 8rem;
 
     margin-right: 4rem;
+
+    &:hover {
+      border: 1px solid black;
+    }
   }
 }

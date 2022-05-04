@@ -4,6 +4,9 @@ import React from "react";
 import LinkedInIcon from "../../public/img/linkedin-icon.svg";
 import GitHubIcon from "../../public/img/Octicons-mark-github.svg";
 
+//Components
+import Button from "../button/button";
+
 //styles
 import styles from "../../public/sass/components/contactlinks.module.scss";
 
@@ -16,7 +19,7 @@ const ContactLinks = () => (
     <a href="#" alt="LinkedIn">
       <GitHubIcon className={styles.contactlinks__icon} />
     </a>
-    <button>Contact Me</button>
+    <Button>Contact Me</Button>
   </div>
 );
 
