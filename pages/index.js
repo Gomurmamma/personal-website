@@ -1,3 +1,6 @@
+//Components
+import ContactLinks from "../components/contact-links/contact-links";
+
 //Style
 import style from "../public/sass/components/home.module.scss";
 
@@ -5,7 +8,7 @@ const Home = () => {
   return (
     <main className={style.textcontent}>
       <h1 className={style.textcontent__heading}>
-        I'm <span className={style.textcontent__namespan}> Antoino Young,</span>
+        I'm <span className={style.textcontent__namespan}> Antonio Young,</span>
         a web developer based in Stroudsburg, Pennsylvania.
       </h1>
       <p className={style.textcontent__paragraph}>
@@ -15,7 +18,8 @@ const Home = () => {
           here.
         </a>{" "}
         I'm currently available for hire.
-      </p>{" "}
+      </p>
+      {ContactLinks()}
     </main>
   );
 };
