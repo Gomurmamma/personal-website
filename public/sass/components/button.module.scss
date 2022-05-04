@@ -15,4 +15,9 @@
   text-transform: uppercase;
   font-family: var(--font-body), sans-serif;
   font-weight: 400;
+
+  &:hover {
+    color: var(--yellow-dark);
+    border-color: var(--yellow-dark);
+  }
 }

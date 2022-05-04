@@ -53,22 +53,22 @@
     color: var(--yellow);
     text-decoration: none; //remove underline
 
-    &:focus {
-      background-color: transparent;
-      animation: pulsate 1s infinite;
+    &:hover {
+      color: var(--yellow-dark);
     }
   }
 
-  &__link:hover {
-    color: var(--yellow-dark);
-  }
+  //&__link:hover {
+  //  color: var(--yellow-dark);
+  //  transform: translateY(-0.2rem);
+  //}
 
   //Underline pseudo element
   &__link:hover::before {
     content: "";
     background-color: var(--yellow-dark);
     display: inline-block;
-    height: 0.5rem;
+    height: 0.3rem;
     width: 8rem;
 
     //position pseudo-element
@@ -78,6 +78,13 @@
     //animation
     cursor: pointer;
     animation: expandLinkWidth 0.35s ease-in-out;
+  }
+
+  &__link:active {
+    &:focus {
+      background-color: transparent;
+      animation: pulsate 1s infinite;
+    }
   }
 }
 
@@ -101,15 +108,15 @@
 
 @keyframes pulsate {
   0% {
-    transform: scale(1);
+    transform: translateY(-0.2rem);
     box-shadow: none;
   }
   50% {
-    transform: scale(1.05);
+    transform: translateY(0rem);
     box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25);
   }
   100% {
-    transform: scale(1);
+    transform: translateY(-0.2rem);
     box-shadow: none;
   }
 }
