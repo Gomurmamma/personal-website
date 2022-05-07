@@ -3,6 +3,7 @@ import React from "react";
 //components
 import Header from "../header/header";
 import Footer from "../footer/footer";
+import TechIcons from "../tech-icons/tech-icons";
 
 //styles
 import layoutStyle from "../../public/sass/components/layout.module.scss";
@@ -16,15 +17,9 @@ const Layout = ({ children }) => {
       </Header>
       <div className={layoutStyle.content}>{children}</div>
       <Footer>
-        <div className={footerStyle.footer__iconsContainer}>
-          <p className={footerStyle.footer__iconsContainer_icon}>React</p>
-          <p className={footerStyle.footer__iconsContainer_icon}>Next.js</p>
-          <p className={footerStyle.footer__iconsContainer_icon}>Scss</p>
-          <p className={footerStyle.footer__iconsContainer_icon}>Jest</p>
-        </div>
+        <div className={footerStyle.footer__iconsContainer}>{TechIcons()}</div>
         <div className={footerStyle.footer__textContainer}>
-          &#169; Antonio Young | <a href="#">LinkedIn</a> |
-          <a href="#">GitHub</a>
+          &#169; Antonio Young
         </div>
       </Footer>
     </React.Fragment>
