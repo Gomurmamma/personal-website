@@ -8,12 +8,26 @@
     width: 5rem;
 
     margin-right: 3rem;
+
+    //animation
+    transition: all 0.2s;
+
+    &:hover {
+      transform: translateY(-1.5rem) scale(1.03);
+    }
   }
 
   &__Nexticon {
     height: 8rem;
-    width: 12rem;
+    width: 11rem;
 
     margin-right: 3rem;
+
+    //animation
+    transition: all 0.2s;
+
+    &:hover {
+      transform: translateY(-1.5rem) scale(1.03);
+    }
   }
 }
