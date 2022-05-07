@@ -4,10 +4,9 @@ import React from "react";
 import Header from "../header/header";
 import Footer from "../footer/footer";
 import TechIcons from "../tech-icons/tech-icons";
-
+import LegalText from "../legal-text/legal-text";
 //styles
 import layoutStyle from "../../public/sass/components/layout.module.scss";
-import footerStyle from "../../public/sass/components/footer.module.scss";
 
 const Layout = ({ children }) => {
   return (
@@ -18,9 +17,7 @@ const Layout = ({ children }) => {
       <div className={layoutStyle.content}>{children}</div>
       <Footer>
         {TechIcons()}
-        <div className={footerStyle.footer__textContainer}>
-          &#169; Antonio Young
-        </div>
+        {LegalText()}
       </Footer>
     </React.Fragment>
   );

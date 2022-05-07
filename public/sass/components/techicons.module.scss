@@ -15,6 +15,10 @@
     &:hover {
       transform: translateY(-1.5rem) scale(1.03);
     }
+
+    &:active {
+      animation: pulsate 1s infinite;
+    }
   }
 
   &__Nexticon {
@@ -29,5 +33,24 @@
     &:hover {
       transform: translateY(-1.5rem) scale(1.03);
     }
+
+    &:active {
+      animation: pulsate 1s infinite;
+    }
+  }
+}
+
+@keyframes pulsate {
+  0% {
+    transform: translateY(-1.5rem);
+    box-shadow: none;
+  }
+  50% {
+    transform: translateY(-1.3rem);
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    transform: translateY(-1.5rem);
+    box-shadow: none;
   }
 }
