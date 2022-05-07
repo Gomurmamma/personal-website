@@ -2,19 +2,6 @@
   display: flex;
   flex-direction: column;
 
-  background-color: red;
-
-  &__iconsContainer {
-    display: flex;
-    justify-content: center;
-    margin-top: 3rem;
-    margin-bottom: 2rem;
-
-    &_icon {
-      margin-right: 4rem;
-    }
-  }
-
   &__textContainer {
     display: flex;
     justify-content: center;

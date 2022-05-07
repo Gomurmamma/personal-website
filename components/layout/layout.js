@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
       </Header>
       <div className={layoutStyle.content}>{children}</div>
       <Footer>
-        <div className={footerStyle.footer__iconsContainer}>{TechIcons()}</div>
+        {TechIcons()}
         <div className={footerStyle.footer__textContainer}>
           &#169; Antonio Young
         </div>
