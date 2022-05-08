@@ -2,7 +2,10 @@ import React from "react";
 
 import style from "../../public/sass/components/home.module.scss";
 
-const TextContent = () => (
+//Component
+import ContactForm from "../contact-form/contact-form";
+
+const TextContent = ({ isDisplayForm }) => (
   <>
     <h1 className={style.content__heading}>
       I'm <span className={style.content__namespan}> Antonio Young,</span>a web
@@ -16,6 +19,7 @@ const TextContent = () => (
       </a>{" "}
       I'm currently available for hire.
     </p>
+    <ContactForm isDisplayForm={isDisplayForm} />
   </>
 );
 

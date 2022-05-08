@@ -1,0 +1,19 @@
+.contactform {
+  display: block;
+
+  font-size: 3rem;
+  font-family: var(--font-body);
+  font-weight: 400;
+  color: var(--black);
+
+  transition: 0.8s;
+  opacity: 1;
+
+  background-color: red;
+
+  z-index: 5;
+  &__hidden {
+    transform: translateY(100%) scale(0) rotateY(50%);
+    opacity: 0;
+  }
+}
