@@ -85,6 +85,7 @@ const ContactForm = ({ isDisplayForm, handleContactClick }) => {
 
         <label className={style.contactform__label}>Email</label>
         <input
+          required
           type="email"
           name="email"
           className={style.contactform__input}
@@ -94,6 +95,7 @@ const ContactForm = ({ isDisplayForm, handleContactClick }) => {
 
         <label className={style.contactform__label}>Name</label>
         <input
+          required
           type="text"
           name="name"
           className={style.contactform__input}
@@ -103,6 +105,7 @@ const ContactForm = ({ isDisplayForm, handleContactClick }) => {
 
         <label className={style.contactform__label}>Message</label>
         <textarea
+          required
           name="message"
           className={style.contactform__input}
           form="contactform"
