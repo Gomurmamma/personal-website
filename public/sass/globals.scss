@@ -1,7 +1,5 @@
-//RUBIK - 400
-@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
-//LATO - 400
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+//LATO - 400 & 700
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 //ARCHIVO BLACK - 400
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
 
@@ -9,7 +7,10 @@
   --black: #1a1b1c;
   --yellow: #fbbf24;
   --yellow-dark: #e6ad1d;
+  --yellow-light: #fae1a1;
+  --purple: #6e32ff;
   --white: #ffffff;
+  --white-dark: rgb(189, 187, 187);
 
   --font-body: Lato;
   --font-title: "Archivo Black";

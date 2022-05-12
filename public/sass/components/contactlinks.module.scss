@@ -24,6 +24,8 @@
   & > * {
     margin: 1rem 2.4rem;
     transition: all 0.2s;
+
+    cursor: pointer;
   }
 
   & > *:hover {

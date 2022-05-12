@@ -15,13 +15,15 @@ const Home = () => {
 
   //handleClick
   const handleContactClick = () => {
-    console.log(isDisplayForm);
     setDisplayForm((isDisplayForm) => !isDisplayForm);
   };
 
   return (
     <main className={style.content}>
-      <TextContent isDisplayForm={isDisplayForm} />
+      <TextContent
+        isDisplayForm={isDisplayForm}
+        handleContactClick={handleContactClick}
+      />
       <ContactLinks handleContactClick={handleContactClick} />
     </main>
   );

@@ -6,7 +6,6 @@ import style from "../../public/sass/components/button.module.scss";
 const Button = ({ children, handleContactClick }) => {
   const handleClick = () => {
     handleContactClick();
-    console.log("click");
   };
 
   return (

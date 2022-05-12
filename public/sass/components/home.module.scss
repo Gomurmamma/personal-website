@@ -1,6 +1,10 @@
 .content {
   margin: 0 5rem;
   font-size: 4.2rem;
+  font-weight: 400;
+
+  position: relative;
+  z-index: 1;
 
   //animation
   transition: all 0.2s;
@@ -21,7 +25,7 @@
 
     font-size: 12.5rem;
 
-    padding-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
 
     color: var(--yellow);
 
@@ -61,6 +65,8 @@
   &__link:visited {
     color: var(--yellow);
     text-decoration: none; //remove underline
+
+    font-weight: 700;
 
     &:hover {
       color: var(--yellow-dark);

@@ -5,7 +5,7 @@ import style from "../../public/sass/components/home.module.scss";
 //Component
 import ContactForm from "../contact-form/contact-form";
 
-const TextContent = ({ isDisplayForm }) => (
+const TextContent = ({ isDisplayForm, handleContactClick }) => (
   <>
     <h1 className={style.content__heading}>
       I'm <span className={style.content__namespan}> Antonio Young,</span>a web
@@ -19,7 +19,10 @@ const TextContent = ({ isDisplayForm }) => (
       </a>{" "}
       I'm currently available for hire.
     </p>
-    <ContactForm isDisplayForm={isDisplayForm} />
+    <ContactForm
+      isDisplayForm={isDisplayForm}
+      handleContactClick={handleContactClick}
+    />
   </>
 );
 
