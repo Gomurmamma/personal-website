@@ -88,6 +88,10 @@
     caret-color: var(--yellow);
 
     resize: none;
+
+    &:focus {
+      outline: solid 6px var(--yellow-dark);
+    }
   }
 
   &__submit {

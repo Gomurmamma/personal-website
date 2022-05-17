@@ -56,7 +56,7 @@ const ContactForm = ({ isDisplayForm, handleContactClick }) => {
         name: "",
         email: "",
         message: "",
-        buttonText: "Submitted",
+        buttonText: "Sent",
         success: response.data.message,
       });
     } catch (error) {
@@ -64,7 +64,7 @@ const ContactForm = ({ isDisplayForm, handleContactClick }) => {
       setState({
         ...state,
         buttonText: "Send",
-        error: error.response.data.error,
+        error: error,
       });
     }
   };
@@ -80,7 +80,7 @@ const ContactForm = ({ isDisplayForm, handleContactClick }) => {
       }
     >
       <XIcon className={style.contactform__icon} onClick={handleClick} />
-      <form id="contactform">
+      <form id="contactform" onSubmit={handleSubmit}>
         <h2 className={style.contactform__title}>Contact Me</h2>
 
         <label className={style.contactform__label}>Email</label>
@@ -91,6 +91,8 @@ const ContactForm = ({ isDisplayForm, handleContactClick }) => {
           className={style.contactform__input}
           placeholder="Enter your email"
           onChange={handleChange("email")}
+          title="Enter a valid email address"
+          pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
         ></input>
 
         <label className={style.contactform__label}>Name</label>
@@ -100,7 +102,9 @@ const ContactForm = ({ isDisplayForm, handleContactClick }) => {
           name="name"
           className={style.contactform__input}
           placeholder="Enter your preferred name"
+          title="Enter your preferred name"
           onChange={handleChange("name")}
+          maxlength="50"
         ></input>
 
         <label className={style.contactform__label}>Message</label>
@@ -110,11 +114,12 @@ const ContactForm = ({ isDisplayForm, handleContactClick }) => {
           className={style.contactform__input}
           form="contactform"
           placeholder="Type your message"
+          title="Type your message here"
           onChange={handleChange("message")}
         ></textarea>
         <br></br>
         <>
-          {error ? <div>An Error While Sending Your Message</div> : ""}
+          {error ? <div>An Error Occurred While Sending Your Message</div> : ""}
           {success ? <div>Thank you! Your message has been sent.</div> : ""}
         </>
         <input
