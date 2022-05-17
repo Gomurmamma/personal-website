@@ -15,6 +15,8 @@ const ContactForm = ({ isDisplayForm, handleContactClick }) => {
     email: "",
     message: "",
     buttonText: "Send",
+    nameError: "",
+    messageError: "You must include a message",
     error: "",
     success: "",
   });
@@ -35,6 +37,7 @@ const ContactForm = ({ isDisplayForm, handleContactClick }) => {
     //console.table({ name, email, message });
 
     setState({ ...state, buttonText: "SENDING" });
+
     try {
       const templateParams = {
         name,
@@ -82,52 +85,103 @@ const ContactForm = ({ isDisplayForm, handleContactClick }) => {
       <XIcon className={style.contactform__icon} onClick={handleClick} />
       <form id="contactform" onSubmit={handleSubmit}>
         <h2 className={style.contactform__title}>Contact Me</h2>
+        <p className={style.contactform__requiredFields}>
+          Required fields are indicated with an "
+          <span className={style.contactform__asterisk} alt="Required Field">
+            *
+          </span>
+          "
+        </p>
 
-        <label className={style.contactform__label}>Email</label>
+        <label htmlFor="email" className={style.contactform__label}>
+          Email:
+          <span className={style.contactform__asterisk} alt="Required Field">
+            *
+          </span>
+        </label>
         <input
           required
           type="email"
           name="email"
+          id="email"
           className={style.contactform__input}
           placeholder="Enter your email"
           onChange={handleChange("email")}
           title="Enter a valid email address"
           pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
         ></input>
+        <p className={style.contactform__input__tooltip}>
+          Enter your preferred email
+        </p>
+        <span className={style.contactform__requirements}>
+          Must be a valid email address
+        </span>
 
-        <label className={style.contactform__label}>Name</label>
+        <label htmlFor="name" className={style.contactform__label}>
+          Name:
+          <span className={style.contactform__asterisk} alt="Required Field">
+            *
+          </span>
+        </label>
         <input
           required
           type="text"
           name="name"
+          id="name"
           className={style.contactform__input}
           placeholder="Enter your preferred name"
           title="Enter your preferred name"
           onChange={handleChange("name")}
-          maxlength="50"
+          maxLength="50"
         ></input>
+        <p className={style.contactform__input__tooltip}>
+          Enter your preferred name
+        </p>
 
-        <label className={style.contactform__label}>Message</label>
+        <label htmlFor="message" className={style.contactform__label}>
+          Message:
+          <span className={style.contactform__asterisk} alt="Required Field">
+            *
+          </span>
+        </label>
         <textarea
           required
           name="message"
+          id="message"
           className={style.contactform__input}
           form="contactform"
           placeholder="Type your message"
           title="Type your message here"
           onChange={handleChange("message")}
         ></textarea>
+        <p className={style.contactform__input__tooltip}>
+          Include your message here
+        </p>
         <br></br>
         <>
-          {error ? <div>An Error Occurred While Sending Your Message</div> : ""}
-          {success ? <div>Thank you! Your message has been sent.</div> : ""}
+          {error ? (
+            <p className={style.contactform__submitResponse}>
+              An Error Occurred While Sending Your Message
+            </p>
+          ) : (
+            ""
+          )}
+          {success ? (
+            <p className={style.contactform__submitResponse}>
+              Thank you! Your message has been sent.
+            </p>
+          ) : (
+            ""
+          )}
         </>
-        <input
+        <button
           type="submit"
           form="contactform"
           value="SEND"
           className={style.contactform__submit}
-        ></input>
+        >
+          {buttonText}
+        </button>
       </form>
     </div>
   );

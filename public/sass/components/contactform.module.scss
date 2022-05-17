@@ -24,7 +24,7 @@
   color: var(--white);
 
   //animation
-  transition: 0.8s;
+  transition: all 0.8s;
   opacity: 1;
 
   &__hidden {
@@ -55,8 +55,34 @@
     }
   }
 
+  &__asterisk {
+    margin: 0 0.5rem;
+    font-size: 4rem;
+    color: var(--yellow);
+
+    //border: 1px solid red;
+  }
+
   &__title {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  &__requiredFields {
+    font-size: 3rem;
+
+    margin-bottom: 1.5rem;
+  }
+
+  &__requirements {
+    position: absolute;
+    top: 21.75%;
+    left: 40%;
+
+    font-size: 3.5rem;
+
+    color: var(--yellow);
+
+    visibility: hidden;
   }
 
   &__label {
@@ -64,7 +90,7 @@
     //element needs to be a block for ^ text align to work
     display: block;
 
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 
     font-family: var(--font-body);
   }
@@ -82,15 +108,68 @@
     border: none;
     border-radius: 5px;
 
+    //Space between positive input validation image
     padding: 2rem;
+    padding-left: 6rem;
 
     //cursor color
     caret-color: var(--yellow);
 
     resize: none;
 
+    //animation
+    transition: all 0.2s;
+
     &:focus {
       outline: solid 6px var(--yellow-dark);
+      outline-offset: 3px;
+    }
+
+    &:focus + &__tooltip {
+      visibility: visible;
+      display: inline-block;
+      height: auto;
+
+      border-radius: 1.5rem;
+      background-color: var(--black);
+      padding: 1.5rem;
+    }
+
+    &:invalid:focus:not(:placeholder-shown) {
+      & ~ .contactform__requirements {
+        visibility: visible;
+      }
+    }
+
+    &:valid {
+      overflow: hidden;
+      //background-color: var(--white);
+      background-image: url("/img/icons8-check-circle.svg");
+      background-repeat: no-repeat;
+      background-position: 10px;
+    }
+
+    //input is not Focused but there's an invalid value present
+    &:invalid:not(:focus):not(:placeholder-shown) {
+      background-color: pink;
+    }
+
+    //&:invalid:focus:not(:placeholder-shown) {
+    //  & ~ .contactform__requirements {
+    //    visibility: visible;
+    //  }
+    //}
+
+    &__tooltip {
+      display: none;
+      visibility: hidden;
+      overflow: hidden;
+      height: 0;
+      cursor: help;
+      color: var(--white);
+
+      font-size: 3rem;
+      font-style: italic;
     }
   }
 
@@ -122,6 +201,13 @@
     &:active {
       animation: pulsate 1s infinite;
     }
+  }
+
+  &__submitResponse {
+    font-size: 3rem;
+    color: var(--yellow);
+
+    margin-bottom: 4rem;
   }
 }
 
