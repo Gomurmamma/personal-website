@@ -107,7 +107,7 @@ const ContactForm = ({ isDisplayForm, handleContactClick }) => {
           className={style.contactform__input}
           placeholder="Enter your email"
           onChange={handleChange("email")}
-          title="Enter a valid email address"
+          title="Email should be a valid address"
           pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
         ></input>
         <p className={style.contactform__input__tooltip}>
